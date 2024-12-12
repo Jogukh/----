@@ -64,6 +64,17 @@ X_train_tf = tfidf_vect.fit_transform(X_train)
 X_test_tf = tfidf_vect.transform(X_test)
 X_val_tf = tfidf_vect.transform(X_val)
 
+# %% TF-IDF 단어 목록 및 빈도 계산
+tfidf_feature_names = tfidf_vect.get_feature_names_out()
+tfidf_word_counts = X_train_tf.sum(axis=0).A1  # 단어별 빈도 합계 계산
+tfidf_word_freq = list(zip(tfidf_feature_names, tfidf_word_counts))
+
+# 단어 빈도 정렬 및 상위 10개 출력
+top_10_words = sorted(tfidf_word_freq, key=lambda x: x[1], reverse=True)[:10]
+print("상위 10개 단어 (TF-IDF 빈도 기준):")
+for word, freq in top_10_words:
+    print(f"{word}: {freq:.2f}")
+
 # Label Encoding
 le = LabelEncoder()
 y_train_le = le.fit_transform(y_train)
