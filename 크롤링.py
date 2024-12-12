@@ -10,8 +10,8 @@ headers = {
 }
 
 # 시작 번호와 크롤링 개수 설정
-start_no = 32380  # 시작 case_no 번호
-n = 5             # 크롤링할 데이터 개수
+start_no = 32434  # 시작 case_no 번호
+n = 10             # 크롤링할 데이터 개수
 
 # 데이터를 저장할 리스트
 data_list = []
@@ -48,7 +48,7 @@ for i in range(start_no, start_no - n, -1):
             print(f"No data found for case_no={i}")
     except Exception as e:
         print(f"Error occurred for case_no={i}: {e}")
-    time.sleep(1)  # 요청 간격 조정
+    time.sleep(0.5)  # 요청 간격 조정
 
 # DataFrame으로 저장 및 CSV 파일로 출력
 df = pd.DataFrame(data_list)
