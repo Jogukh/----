@@ -102,7 +102,7 @@ Disscusion
 
 실험 데이터로 쓰인 국토안전관리원_건설안전사고사례_20240630.csv TF-IDF 빈도 산출 결과 다음과 같이 나타났습니다.
 
-![TF-IDF_단어순위](https://github.com/user-attachments/assets/7149719a-2056-46d9-887f-0d5dfda829c2)
+![TF-IDF_단어순위](https://github.com/user-attachments/assets/32ded01b-a3e7-483e-b0a9-970fe8b127da)
 
 6번째, 7번째로 가장 많이 등장하는 '지하'와 왼쪽은 사고 분류에 도움이 되지 않는 것으로 보입니다.
 
